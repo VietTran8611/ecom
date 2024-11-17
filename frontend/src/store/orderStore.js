@@ -1,7 +1,7 @@
 import {create} from 'zustand'
 import axios from 'axios'
 
-const API_URL = "http://localhost:5000/api/order/"
+const API_URL = import.meta.env.MODE === "development" ? "http://localhost:5000/api/order" : "/api/order";
 
 export const useOrderStore = create((set)=>({
     orders: [],
