@@ -2,7 +2,7 @@ import React, { useEffect, useState } from 'react'
 import { LeftMain } from './LeftMain'
 
 import { useAuthStore } from '../../../store/authStore';
-import { ManagePersonalInfo } from './managePersonalInfo';
+import { ManagePersonalInfo } from './ManagePersonalInfo';
 import { ManageOrder } from './ManageOrder';
 import { ManageAddress } from './ManageAddress';
 
