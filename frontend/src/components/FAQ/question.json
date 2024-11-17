@@ -1,0 +1,7 @@
+[
+    {"q": "Is this full stack?","a":"No it is client side, i will prop turn this into full stack with firebase once i learn how to host full stack web in github page"},
+    {"q":"How to add to cart?","a":"Just press the btn"},
+    {"q":"How do i refund?","a":"You cant actually buy anything here so no need to refund"},
+    {"q":"Why all products are the same?","a":"I am lazy"},
+    {"q":"Why can you change profile image?","a":"I want to make dashboard for seller and buyer, that is a function in seller side I just havent had time to implement seller side fully yet. In seller side i plan to have seller add new item to sell and even change base colour of the web"}
+]

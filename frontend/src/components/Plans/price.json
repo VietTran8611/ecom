@@ -1,0 +1,5 @@
+[
+    {"title":"Basic","btn":"Get Started","price":"Free","perk":["Lorem, ipsum dolor.","Lorem ipsum dolor sit."]},
+    {"title":"Pro","btn":"Join Now","price":"$0.00 / month","perk":["Lorem, ipsum dolor.","Lorem ipsum dolor sit.","Lorem ipsum dolor sit amet consectetur adipisicing elit.","Lorem ipsum dolor sit."]},
+    {"title":"Premium","btn":"Learn More","price":"$0.00 / month","perk":["Lorem, ipsum dolor.","Lorem ipsum dolor sit.","Lorem ipsum dolor sit amet consectetur adipisicing elit.","Lorem ipsum dolor sit.","Lorem ipsum dolor sit amet consectetur."]}
+]
