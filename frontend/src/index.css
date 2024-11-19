@@ -14,7 +14,7 @@
 
   --fs--h1: 3rem;
   --fs--h2: 2rem;
-  --fs--h3: 1.25rem;
+  --fs--h3: 1.5rem;
   --fs--body: 1rem;
   --fs--icon: 1.75rem;
 
@@ -821,6 +821,7 @@ h3{
 .manage-acc-main{
   display: flex;
   gap: 4em;
+  width: 100%;
 }
 
 .ma-card-content{
@@ -849,6 +850,78 @@ h3{
 
 .ma-card-btn p{
   margin: 0 1em;
+}
+
+.ma-left-top p{
+  margin: 0;
+  color: var(--clr--secondary);
+  }
+  
+  .ma-left-top{
+    margin-bottom: 2em;
+  }
+  
+  .ma-left-top h2{
+    margin: 0;
+  }
+  
+  .ma-left-btn-section button{
+    font-size: var(--fs--h3);
+    border: none;
+    background-color: inherit;
+    margin: .5em 0;
+    text-align: start;
+    cursor: pointer;
+  }
+  
+  .ma-left-btn-section button:hover{
+    color: var(--clr--primary);
+  }
+  
+  .p-color{
+    color: var(--clr--primary);
+  }
+.ma-righ-add-con{
+  
+  width: 70%;
+  display: flex;
+  gap: 1em;
+}
+
+.ma-add-con{
+  width: 49%;
+  background-color: oklch(from var(--clr--secondary) calc(l + .14) c h);
+  padding: 1em;
+  border-radius: 1em;
+  height: fit-content;
+}
+
+.addr-info{
+  display: flex;
+  gap: 10px;
+}
+
+.addr-con{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.personal-edit{
+  display: flex;
+  justify-content: space-between;
+}
+
+.ma-card-btn:hover{
+  color: var(--clr--primary);
+}
+
+.pencil-hover{
+  cursor: pointer;
+}
+
+.pencil-hover:hover{
+  color: var(--clr--primary);
 }
 
 .cart-content{
@@ -969,3 +1042,4 @@ h3{
 .home-btn{
   cursor: pointer;
 }
+

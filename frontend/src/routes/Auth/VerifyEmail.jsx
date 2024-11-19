@@ -8,7 +8,7 @@ export const VerifyEmail = () => {
 	const inputRefs = useRef([]);
 	const navigate = useNavigate();
 
-    const { error, isLoading, verifyEmail } = useAuthStore();
+    const { error, isLoading, verifyEmail,autoVerifyEmail,user } = useAuthStore();
 
     const handleChange = (index, value) => {
         const newCode = [...code];
@@ -54,6 +54,7 @@ export const VerifyEmail = () => {
         }
     }
 
+
     useEffect(() => {
 		if (code.every((digit) => digit !== "")) {
 			handleSubmit(new Event("submit"));
@@ -84,6 +85,7 @@ export const VerifyEmail = () => {
 			{error && <p>{error}</p>}
             <button type='submit' className='auth-input-btn'>{isLoading ? "Verifying..." : "Verify Email"}</button>
         </form>
+        <button onClick={()=>{toast.success(user.verificationToken)}} className='auth-input-btn'>show code</button>
     </div>
   )
 }

@@ -39,9 +39,9 @@ export const ManagePersonalInfo = (props) => {
     }
 
   return (
-    <div>
-        <div>
-            <div className='ma-card-content'>
+    <div className='ma-righ-add-con'>
+        <div className='ma-add-con'>
+            <div className='personal-edit'>
                 <div>
                     <h3>Name</h3>
                     {toggleNameInput ? (
@@ -56,14 +56,14 @@ export const ManagePersonalInfo = (props) => {
                     )}
                 </div>
                 <div onClick={handleSwitch} className='ma-card-btn'>
-                    <p>Edit username</p>
+                    <p>Edit</p>
                     <UserPen className='ma-card-icon' />
                 </div>
             </div>
             <button onClick={handleSubmit}>submit</button>
         </div>
-        <div>
-            <div className='ma-card-content'>
+        <div className='ma-add-con '>
+            <div className='personal-edit'>
                 <div>
                     <h3>Contact Info</h3>
                     {toggleEmailInput ? (
@@ -78,7 +78,7 @@ export const ManagePersonalInfo = (props) => {
                     )}
                 </div>
                 <div onClick={handleSwitch2} className='ma-card-btn'>
-                    <p>Edit email</p>
+                    <p>Edit</p>
                     <UserPen className='ma-card-icon' />
                 </div>
             </div>

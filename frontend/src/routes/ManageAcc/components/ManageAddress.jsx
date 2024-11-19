@@ -83,196 +83,219 @@ export const ManageAddress = (props) => {
     }
 
   return (
-    <div>
-        <div>
-            <div>
+    <div className='ma-righ-add-con'>
+        <div className='ma-add-con'>
                 <div>
-                    <h3>Shipping Address</h3>
+                    <div className='addr-con'>
+                        <h3>Shipping Address</h3>
+                        <Truck />
+                    </div>
                     <div>
-                        <div>
-                            <p>City:</p>
-                            {shipping.city ? (
-                                <input 
-                                    type="text"
-                                    name="name"
-                                    placeholder={props.user.shippingAddress.city}
-                                    onChange={(e) => props.setNewUser({ ...props.newUser, shippingAddress:{...props.newUser.shippingAddress,city: e.target.value}})}
-                                />
-                            ) : (
-                                <p>{props.user.shippingAddress.city}</p>
-                            )}
-                            <Pencil onClick={editshipping1}/>
+                        <div className='addr-con'>
+                            <div className='addr-info'>
+                                <p>City:</p>
+                                {shipping.city ? (
+                                    <input 
+                                        type="text"
+                                        name="name"
+                                        placeholder={props.user.shippingAddress.city}
+                                        onChange={(e) => props.setNewUser({ ...props.newUser, shippingAddress:{...props.newUser.shippingAddress,city: e.target.value}})}
+                                    />
+                                ) : (
+                                    <p>{props.user.shippingAddress.city}</p>
+                                )}
+                            </div>
+                            <Pencil className='pencil-hover' onClick={editshipping1}/>
                         </div>
-                        <div>
-                        <p>Country:</p>
-                            {shipping.country ? (
-                                <input 
-                                    type="text"
-                                    name="name"
-                                    placeholder={props.user.shippingAddress.country}
-                                    onChange={(e) => props.setNewUser({ ...props.newUser, shippingAddress:{...props.newUser.shippingAddress,country: e.target.value}})}
-                                />
-                            ) : (
-                                <p>{props.user.shippingAddress.country}</p>
-                            )}
-                            <Pencil onClick={editshipping2}/>
+                        <div className='addr-con'>
+                            <div className='addr-info'>
+                                <p>Country:</p>
+                                    {shipping.country ? (
+                                        <input 
+                                            type="text"
+                                            name="name"
+                                            placeholder={props.user.shippingAddress.country}
+                                            onChange={(e) => props.setNewUser({ ...props.newUser, shippingAddress:{...props.newUser.shippingAddress,country: e.target.value}})}
+                                        />
+                                    ) : (
+                                        <p>{props.user.shippingAddress.country}</p>
+                                    )}
+                            </div>
+                            <Pencil className='pencil-hover' onClick={editshipping2}/>
                         </div>
-                        <div>
-                        <p>Province:</p>
-                            {shipping.province ? (
-                                <input 
-                                    type="text"
-                                    name="name"
-                                    placeholder={props.user.shippingAddress.province}
-                                    onChange={(e) => props.setNewUser({ ...props.newUser, shippingAddress:{...props.newUser.shippingAddress,province: e.target.value}})}
-                                />
-                            ) : (
-                                <p>{props.user.shippingAddress.province}</p>
-                            )}
-                            <Pencil onClick={editshipping3}/>
+                        <div className='addr-con'>
+                            <div className='addr-info'>
+                                <p>Province:</p>
+                                    {shipping.province ? (
+                                        <input 
+                                            type="text"
+                                            name="name"
+                                            placeholder={props.user.shippingAddress.province}
+                                            onChange={(e) => props.setNewUser({ ...props.newUser, shippingAddress:{...props.newUser.shippingAddress,province: e.target.value}})}
+                                        />
+                                    ) : (
+                                        <p>{props.user.shippingAddress.province}</p>
+                                    )}
+                            </div>
+                            <Pencil className='pencil-hover' onClick={editshipping3}/>
                         </div>
-                        <div>
-                            <p>Street 1:</p>
-                            {shipping.street1 ? (
-                                <input 
-                                    type="text"
-                                    name="name"
-                                    placeholder={props.user.shippingAddress.street1}
-                                    onChange={(e) => props.setNewUser({ ...props.newUser, shippingAddress:{...props.newUser.shippingAddress,street1: e.target.value}})}
-                                />
-                            ) : (
-                                <p>{props.user.shippingAddress.street1}</p>
-                            )}
-                            <Pencil onClick={editshipping4}/>
+                        <div className='addr-con'>
+                            <div className='addr-info'>
+                                <p>Street 1:</p>
+                                {shipping.street1 ? (
+                                    <input 
+                                        type="text"
+                                        name="name"
+                                        placeholder={props.user.shippingAddress.street1}
+                                        onChange={(e) => props.setNewUser({ ...props.newUser, shippingAddress:{...props.newUser.shippingAddress,street1: e.target.value}})}
+                                    />
+                                ) : (
+                                    <p>{props.user.shippingAddress.street1}</p>
+                                )}
+                            </div>
+                            <Pencil className='pencil-hover' onClick={editshipping4}/>
                         </div>
-                        <div>
-                            <p>Street 2:</p>
-                            {shipping.street2 ? (
-                                <input 
-                                    type="text"
-                                    name="name"
-                                    placeholder={props.user.shippingAddress.street2}
-                                    onChange={(e) => props.setNewUser({ ...props.newUser, shippingAddress:{...props.newUser.shippingAddress,street2: e.target.value}})}
-                                />
-                            ) : (
-                                <p>{props.user.shippingAddress.street2}</p>
-                            )}
-                            <Pencil onClick={editshipping5}/>
+                        <div className='addr-con'>
+                            <div className='addr-info'>
+                                <p>Street 2:</p>
+                                {shipping.street2 ? (
+                                    <input 
+                                        type="text"
+                                        name="name"
+                                        placeholder={props.user.shippingAddress.street2}
+                                        onChange={(e) => props.setNewUser({ ...props.newUser, shippingAddress:{...props.newUser.shippingAddress,street2: e.target.value}})}
+                                    />
+                                ) : (
+                                    <p>{props.user.shippingAddress.street2}</p>
+                                )}
+                            </div>
+                            <Pencil className='pencil-hover' onClick={editshipping5}/>
                         </div>
-                        <div>
-                            <p>Zip code:</p>
-                            {shipping.zip ? (
-                                <input 
-                                    type="text"
-                                    name="name"
-                                    placeholder={props.user.shippingAddress.zip}
-                                    onChange={(e) => props.setNewUser({ ...props.newUser, shippingAddress:{...props.newUser.shippingAddress,zip: e.target.value}})}
-                                />
-                            ) : (
-                                <p>{props.user.shippingAddress.zip}</p>
-                            )}
-                            <Pencil onClick={editshipping6}/>
+                        <div className='addr-con'>
+                            <div className='addr-info'>
+                                <p>Zip code:</p>
+                                {shipping.zip ? (
+                                    <input 
+                                        type="text"
+                                        name="name"
+                                        placeholder={props.user.shippingAddress.zip}
+                                        onChange={(e) => props.setNewUser({ ...props.newUser, shippingAddress:{...props.newUser.shippingAddress,zip: e.target.value}})}
+                                    />
+                                ) : (
+                                    <p>{props.user.shippingAddress.zip}</p>
+                                )}
+                            </div>
+                            <Pencil className='pencil-hover' onClick={editshipping6}/>
                         </div>
                     </div>
                 </div>
-                <Truck />
                 <button onClick={handleSubmit}>Submit</button>
-            </div>
-            <button onClick={()=>{console.log(props.newUser)}}>click</button>
+
         </div>
-        <div>
-            <div>
-            <h3>BIlling Address</h3>
+        <div className='ma-add-con'>
+            <div className='addr-con'>
+                <h3>BIlling Address</h3>
+                <Receipt />
+            </div>
                     <div>
-                        <div>
-                            <p>City:</p>
-                            {billing.city ? (
-                                <input 
-                                    type="text"
-                                    name="name"
-                                    placeholder={props.user.billingAddress.city}
-                                    onChange={(e) => props.setNewUser({ ...props.newUser, billingAddress:{...props.newUser.billingAddress,city: e.target.value}})}
-                                />
-                            ) : (
-                                <p>{props.user.billingAddress.city}</p>
-                            )}
-                            <Pencil onClick={editshipping7}/>
+                        <div className='addr-con'>
+                            <div className='addr-info'>
+                                <p>City:</p>
+                                {billing.city ? (
+                                    <input 
+                                        type="text"
+                                        name="name"
+                                        placeholder={props.user.billingAddress.city}
+                                        onChange={(e) => props.setNewUser({ ...props.newUser, billingAddress:{...props.newUser.billingAddress,city: e.target.value}})}
+                                    />
+                                ) : (
+                                    <p>{props.user.billingAddress.city}</p>
+                                )}
+                            </div>
+                            <Pencil className='pencil-hover' onClick={editshipping7}/>
                         </div>
-                        <div>
-                        <p>Country:</p>
-                            {billing.country ? (
-                                <input 
-                                    type="text"
-                                    name="name"
-                                    placeholder={props.user.billingAddress.country}
-                                    onChange={(e) => props.setNewUser({ ...props.newUser, billingAddress:{...props.newUser.billingAddress,country: e.target.value}})}
-                                />
-                            ) : (
-                                <p>{props.user.billingAddress.country}</p>
-                            )}
-                            <Pencil onClick={editshipping8}/>
+                        <div className='addr-con'>
+                            <div className='addr-info'>
+                                <p>Country:</p>
+                                    {billing.country ? (
+                                        <input 
+                                            type="text"
+                                            name="name"
+                                            placeholder={props.user.billingAddress.country}
+                                            onChange={(e) => props.setNewUser({ ...props.newUser, billingAddress:{...props.newUser.billingAddress,country: e.target.value}})}
+                                        />
+                                    ) : (
+                                        <p>{props.user.billingAddress.country}</p>
+                                    )}
+                            </div>
+                            <Pencil className='pencil-hover' onClick={editshipping8}/>
                         </div>
-                        <div>
-                        <p>Province:</p>
-                            {billing.province ? (
-                                <input 
-                                    type="text"
-                                    name="name"
-                                    placeholder={props.user.billingAddress.province}
-                                    onChange={(e) => props.setNewUser({ ...props.newUser, billingAddress:{...props.newUser.billingAddress,province: e.target.value}})}
-                                />
-                            ) : (
-                                <p>{props.user.billingAddress.province}</p>
-                            )}
-                            <Pencil onClick={editshipping9}/>
+                        <div className='addr-con'>
+                            <div className='addr-info'>
+                                <p>Province:</p>
+                                    {billing.province ? (
+                                        <input 
+                                            type="text"
+                                            name="name"
+                                            placeholder={props.user.billingAddress.province}
+                                            onChange={(e) => props.setNewUser({ ...props.newUser, billingAddress:{...props.newUser.billingAddress,province: e.target.value}})}
+                                        />
+                                    ) : (
+                                        <p>{props.user.billingAddress.province}</p>
+                                    )}
+                            </div>
+                            <Pencil className='pencil-hover' onClick={editshipping9}/>
                         </div>
-                        <div>
-                            <p>Street 1:</p>
-                            {billing.street1 ? (
-                                <input 
-                                    type="text"
-                                    name="name"
-                                    placeholder={props.user.billingAddress.street1}
-                                    onChange={(e) => props.setNewUser({ ...props.newUser, billingAddress:{...props.newUser.billingAddress,street1: e.target.value}})}
-                                />
-                            ) : (
-                                <p>{props.user.billingAddress.street1}</p>
-                            )}
-                            <Pencil onClick={editshipping10}/>
+                        <div className='addr-con'>
+                            <div className='addr-info'>
+                                <p>Street 1:</p>
+                                {billing.street1 ? (
+                                    <input 
+                                        type="text"
+                                        name="name"
+                                        placeholder={props.user.billingAddress.street1}
+                                        onChange={(e) => props.setNewUser({ ...props.newUser, billingAddress:{...props.newUser.billingAddress,street1: e.target.value}})}
+                                    />
+                                ) : (
+                                    <p>{props.user.billingAddress.street1}</p>
+                                )}
+                            </div>
+                            <Pencil className='pencil-hover' onClick={editshipping10}/>
                         </div>
-                        <div>
-                            <p>Street 2:</p>
-                            {billing.street2 ? (
-                                <input 
-                                    type="text"
-                                    name="name"
-                                    placeholder={props.user.billingAddress.street2}
-                                    onChange={(e) => props.setNewUser({ ...props.newUser, billingAddress:{...props.newUser.billingAddress,street2: e.target.value}})}
-                                />
-                            ) : (
-                                <p>{props.user.billingAddress.street2}</p>
-                            )}
-                            <Pencil onClick={editshipping11}/>
+                        <div className='addr-con'>
+                            <div className='addr-info'>
+                                <p>Street 2:</p>
+                                {billing.street2 ? (
+                                    <input 
+                                        type="text"
+                                        name="name"
+                                        placeholder={props.user.billingAddress.street2}
+                                        onChange={(e) => props.setNewUser({ ...props.newUser, billingAddress:{...props.newUser.billingAddress,street2: e.target.value}})}
+                                    />
+                                ) : (
+                                    <p>{props.user.billingAddress.street2}</p>
+                                )}
+                            </div>
+                            <Pencil className='pencil-hover' onClick={editshipping11}/>
                         </div>
-                        <div>
-                            <p>Zip code:</p>
-                            {billing.zip ? (
-                                <input 
-                                    type="text"
-                                    name="name"
-                                    placeholder={props.user.billingAddress.zip}
-                                    onChange={(e) => props.setNewUser({ ...props.newUser, billingAddress:{...props.newUser.billingAddress,zip: e.target.value}})}
-                                />
-                            ) : (
-                                <p>{props.user.billingAddress.zip}</p>
-                            )}
-                            <Pencil onClick={editshipping12}/>
+                        <div className='addr-con'>
+                            <div className='addr-info'>
+                                <p>Zip code:</p>
+                                {billing.zip ? (
+                                    <input 
+                                        type="text"
+                                        name="name"
+                                        placeholder={props.user.billingAddress.zip}
+                                        onChange={(e) => props.setNewUser({ ...props.newUser, billingAddress:{...props.newUser.billingAddress,zip: e.target.value}})}
+                                    />
+                                ) : (
+                                    <p>{props.user.billingAddress.zip}</p>
+                                )}
+                            </div>
+                            <Pencil className='pencil-hover' onClick={editshipping12}/>
                         </div>
                     </div>
                 <button onClick={handleSubmit}>Submit</button>    
-                <Receipt  />
-            </div>
-            <button>btn</button>
         </div>
     </div>
   )

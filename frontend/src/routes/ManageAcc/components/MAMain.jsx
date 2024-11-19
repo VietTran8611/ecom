@@ -63,10 +63,10 @@ const [newUser, setNewUser] = useState({
 })
   return (
     <div className='manage-acc-main'>
-        <LeftMain personalBtn={personalBtn} orderBtn={orderBtn} AddressBtn={AddressBtn} user={user}/>
-        {personal && <ManagePersonalInfo newUser={newUser}  setNewUser={setNewUser} user={user} />}
-        {order && <ManageOrder user={user}/>}
-        {address && <ManageAddress AddressBtn={AddressBtn} newUser={newUser}  setNewUser={setNewUser}  user={user}/>}
+        <LeftMain personal={personal} order={order} address={address} personalBtn={personalBtn} orderBtn={orderBtn} AddressBtn={AddressBtn} user={user}/>
+            {personal && <ManagePersonalInfo newUser={newUser}  setNewUser={setNewUser} user={user} />}
+            {order && <ManageOrder user={user}/>}
+            {address && <ManageAddress AddressBtn={AddressBtn} newUser={newUser}  setNewUser={setNewUser}  user={user}/>}
     </div>
   )
 }

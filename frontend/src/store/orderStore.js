@@ -10,7 +10,7 @@ export const useOrderStore = create((set)=>({
     fetchOrder: async(pid)=>{
         set({isLoading: true, error: null})
         try {
-            const res = await fetch(`${API_URL}${pid}`);
+            const res = await fetch(`${API_URL}/${pid}`);
             const data = await res.json();
             set({ orders: data.data });
             

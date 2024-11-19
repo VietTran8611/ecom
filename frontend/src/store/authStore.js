@@ -131,6 +131,17 @@ export const useAuthStore = create((set) => ({
 			throw error;
 		}
 	},
+	autoVerifyEmail: async (pid) => {
+		set({ isLoading: true, error: null });
+		try {
+			const response = await axios.get(`${API_URL}/verify-email-auto/${pid}`);
+			set({ user: response.data.user, isAuthenticated: true, isLoading: false,isAdmin:false });
+			return response.data;
+		} catch (error) {
+			set({ error: "Error verifying email", isLoading: false });
+			throw error;
+		}
+	},
 	checkAuth: async () => {
 		set({ isCheckingAuth: true, error: null });
 		try {
