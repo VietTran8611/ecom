@@ -56,7 +56,7 @@ export const ManagePersonalInfo = (props) => {
                     )}
                 </div>
                 <div onClick={handleSwitch} className='ma-card-btn'>
-                    <p>Edit</p>
+
                     <UserPen className='ma-card-icon' />
                 </div>
             </div>
@@ -78,7 +78,7 @@ export const ManagePersonalInfo = (props) => {
                     )}
                 </div>
                 <div onClick={handleSwitch2} className='ma-card-btn'>
-                    <p>Edit</p>
+
                     <UserPen className='ma-card-icon' />
                 </div>
             </div>
