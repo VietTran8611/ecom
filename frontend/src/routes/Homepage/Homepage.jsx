@@ -9,13 +9,22 @@ import { FAQ } from '../../components/FAQ/FAQ'
 import { Footer } from '../../components/Footer/Footer'
 import { Hero } from '../../components/Hero/Hero'
 import { useAuthStore } from '../../store/authStore'
+import { useAdminStore } from '../../store/adminStore'
 
 export const Homepage = () => {
   const {isAdmin} = useAuthStore()
+
+  const { fetchAdminData,admin } = useAdminStore();
+  useEffect(() => {
+    fetchAdminData();
+  }, [fetchAdminData]);
+
   return (
     <div>
       <Nav />
-      <Hero />
+      {admin && (
+        <Hero admin={admin}/>
+      )}
       <Main />
       <Banner />
       <Plans />

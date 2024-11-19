@@ -1,9 +1,13 @@
 import React from 'react'
 
-export const Banner = () => {
+export const Banner = (props) => {
   return (
     <div className='banner-container'>
-        <img src="./src/img/banner.jpeg" alt="" />
+        {props.admin.map(({avatar,banner},index)=>{
+          return(
+            <img src={banner} alt="" />
+          )
+        })}
         <div className='banner-content'>
             <div className='text'>
                 <h1>Lorem, ipsum dolor.</h1>

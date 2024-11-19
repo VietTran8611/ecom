@@ -1,6 +1,7 @@
 import React, { useState } from 'react'
 import { useProductsStore } from '../../../../store/productStore';
 import toast from 'react-hot-toast';
+import { useAdminStore } from '../../../../store/adminStore';
 
 
 function convertToBase64(file){
@@ -22,6 +23,11 @@ export const EditProductModal = (props) => {
 		image: props.image,
 	});  
 
+    const [imga,setImg] = useState({
+      banner: "",
+      avatar: ""
+    })
+
     const { updateProduct,deleteProduct } = useProductsStore();
 
     const handleSubmit = async  (e) => {
@@ -29,14 +35,14 @@ export const EditProductModal = (props) => {
         const { success, message } = await updateProduct(props.id,newProduct);
         if (!success) {
             toast.error("Error")
-		} else {
-            toast.success("success")
-            setNewProduct({ 		
-                name: props.name,
-                price: props.price,
-                image: props.image,});
-            props.toggleModal()
-		}
+          } else {
+              toast.success("success")
+              setNewProduct({ 		
+                  name: props.name,
+                  price: props.price,
+                  image: props.image,});
+              props.toggleModal()
+          }
 		
       }
 
@@ -62,6 +68,33 @@ export const EditProductModal = (props) => {
         const base64 = await convertToBase64(file);
         setNewProduct({ ...newProduct, image : base64 })
       }
+
+    //   const tempHandleFileUpload = async (e) => {
+    //     const file = e.target.files[0];
+    //     const base64 = await convertToBase64(file);
+    //     setImg({ ...imga, banner : base64 })
+    //   }
+
+    //   const tempHandleFileUpload2 = async (e) => {
+    //     const file = e.target.files[0];
+    //     const base64 = await convertToBase64(file);
+    //     setImg({ ...imga, avatar : base64 })
+    //     console.log(imga)
+    //   }
+
+      
+    // const handleSubmitTemp = async  (e) => {
+    //   e.preventDefault();
+    //   console.log(imga)
+    //   const { success, message } = await createAdminData(imga);
+    //   if (!success) {
+    //       toast.error("Error")
+    //     } else {
+    //         toast.success("success")
+    //         props.toggleModal()
+    //     }
+  
+    // }
 
   return (
     <div className='modal'>

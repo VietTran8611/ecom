@@ -3,6 +3,7 @@ import dotenv from "dotenv"
 import { connectDB } from './config/db.js'
 import productRoutes from "./routes/product.route.js";
 import authRoutes from './routes/auth.route.js'
+import adminRoutes from './routes/admin.route.js'
 import orderRoutes from './routes/order.route.js'
 import path from 'path';
 
@@ -22,6 +23,7 @@ app.use(cookieParser())
 app.use("/api/products", productRoutes);
 app.use("/api/auth",authRoutes)
 app.use("/api/order",orderRoutes)
+app.use("/api/admin",adminRoutes)
 
 if (process.env.NODE_ENV === "production") {
 	app.use(express.static(path.join(__dirname, "/frontend/dist")));
