@@ -100,9 +100,10 @@ export const EditProductModal = (props) => {
     <div className='modal'>
         <div onClick={props.toggleModal} className="overlay"></div>
         <div className="modal-content  edit-modal">
-            <h1>Create new product</h1>
+            <h1>Edit product</h1>
             <form onSubmit={handleSubmit}>
                 <input 
+                    className='modal-edit-pro-input'
                     type="text"
                     name="name"
                     value={newProduct.name}
@@ -110,6 +111,7 @@ export const EditProductModal = (props) => {
                     onChange={(e) => setNewProduct({ ...newProduct, name: e.target.value })}
                 />
                 <input 
+                    className='modal-edit-pro-input'
                     type="text"
                     name="price"
                     placeholder={props.price}
@@ -128,9 +130,9 @@ export const EditProductModal = (props) => {
                 <label htmlFor="file-upload" >
                     <img className='custom-file-upload' src={props.image} alt="" />
                 </label>
-                <button type='submit'>Submit</button>
+                <button className='submit-btn' type='submit'>Submit</button>
             </form>
-            <button onClick={handleDelete}>
+            <button className='submit-btn del' onClick={handleDelete}>
                 Delete Product
             </button>
             <button className="close-modal" onClick={props.toggleModal}>

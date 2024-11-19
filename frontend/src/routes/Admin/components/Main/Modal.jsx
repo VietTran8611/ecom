@@ -46,17 +46,17 @@ export const Modal = (props) => {
   return (
     <div className='modal'>
         <div onClick={props.toggleModal} className="overlay"></div>
-        <div className="modal-content">
+        <div className="modal-content create-modal">
             <h1>Create new product</h1>
-            <form onSubmit={handleSubmit}>
-                <input 
+            <form className='modal-form' onSubmit={handleSubmit}>
+                <input className='modal-edit-pro-input'
                     type="text"
                     name="name"
                     value={newProduct.name}
                     placeholder='Product Name'
                     onChange={(e) => setNewProduct({ ...newProduct, name: e.target.value })}
                 />
-                <input 
+                <input className='modal-edit-pro-input'
                     type="text"
                     name="price"
                     placeholder='Price'
@@ -73,7 +73,7 @@ export const Modal = (props) => {
                     onChange={(e) => handleFileUpload(e)}
                 />
 
-                <button type='submit'>Submit</button>
+                <button className='submit-btn' type='submit'>Submit</button>
             </form>
             <button className="close-modal" onClick={props.toggleModal}>
               X
