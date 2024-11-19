@@ -26,7 +26,9 @@ export const Homepage = () => {
         <Hero admin={admin}/>
       )}
       <Main />
-      <Banner />
+      {admin && (
+        <Banner admin={admin}/>
+      )}
       <Plans />
       <RatingTitle />
       <Rating />
