@@ -7,6 +7,7 @@ export const useProductsStore = create((set)=>({
     products: [],
     cart:[],
     isLoading: false,
+    isCheckProduct: true,
     error:null,
     fetchProducts: async()=>{
         set({isLoading: true, error: null})

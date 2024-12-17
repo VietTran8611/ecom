@@ -74,7 +74,7 @@ export const CartCard = (props) => {
         arr = arr.filter(item => item.productId != props.cart._id)
         props.setCart(arr)
         removeCartItem(props.cart._id)
-        location.reload();
+        // location.reload();
 
     }
   return (

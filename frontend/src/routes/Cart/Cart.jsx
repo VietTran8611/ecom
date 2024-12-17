@@ -11,8 +11,8 @@ export const Cart = () => {
   const [cartItem,setCart] = useState([])
   const navigate = useNavigate();
 
-  const { fetchCart, cart } = useProductsStore();
-  const {  user } = useAuthStore();
+  const { fetchCart, cart, isCheckProduct } = useProductsStore();
+  const {  user, isCheckingAuth } = useAuthStore();
   const {createOrder} = useOrderStore()
 
   const cart1 = window.localStorage.getItem('cart')
@@ -41,6 +41,9 @@ export const Cart = () => {
     window.localStorage.setItem('order',JSON.stringify(false))
     navigate('/manage-account')
   }
+
+    if (isCheckingAuth) return <Spinner />;
+  
   return (
       <div>
         <Nav />

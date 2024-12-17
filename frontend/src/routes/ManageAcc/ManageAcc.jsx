@@ -9,10 +9,6 @@ export const ManageAcc = () => {
   const { isAuthenticated, user, checkAuth } = useAuthStore();
   const navigate = useNavigate();
   const [userData,setUser] = useState()
-  useEffect(() => {
-		checkAuth();
-	}, []);
-
 
 
   return (
