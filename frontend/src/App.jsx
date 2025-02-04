@@ -122,7 +122,9 @@ function App() {
 						</RedirectAuthenticatedUser>
 					}
 				/>
-				<Route path='/verify-email' element={<VerifyEmail />} />
+				<Route path='/verify-email' element={
+					<VerifyEmail />
+				} />
 				 <Route path='*' element={<Navigate to='/' replace />} /> 
 				<Route path='*' element={<Navigate to='/' replace />} />
 			</Routes>

@@ -2,6 +2,23 @@ import React, { useEffect, useRef, useState } from 'react'
 import { useNavigate } from 'react-router-dom';
 import { useAuthStore } from '../../store/authStore';
 import toast from 'react-hot-toast';
+import {
+    Flex,
+    Heading,
+    Input,
+    Button,
+    InputGroup,
+    Stack,
+    InputLeftElement,
+    chakra,
+    Box,
+    Link,
+    Avatar,
+    FormControl,
+    FormHelperText,
+    InputRightElement,
+    Text
+  } from "@chakra-ui/react";
 
 export const VerifyEmail = () => {
     const [code, setCode] = useState(["", "", "", "", "", ""]);
@@ -62,10 +79,12 @@ export const VerifyEmail = () => {
 	}, [code]);
 
   return (
+    
     <div className='auth-container'>
         <h2 className='verify-h2'>
             Verify Your Email
         </h2>
+        
         <p>Enter the 6-digit code sent to your email address.</p>
         <form onSubmit={handleSubmit}>
             <div className='verify-code'>
@@ -85,6 +104,7 @@ export const VerifyEmail = () => {
 			{error && <p>{error}</p>}
             <button type='submit' className='auth-input-btn'>{isLoading ? "Verifying..." : "Verify Email"}</button>
         </form>
+        <p>using mailtrap without domain name so cant send email other than myself use show code button to show verify code</p>
         <button onClick={()=>{toast.success(user.verificationToken)}} className='auth-input-btn'>show code</button>
     </div>
   )

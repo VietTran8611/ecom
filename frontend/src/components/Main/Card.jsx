@@ -1,5 +1,6 @@
 import React from 'react'
 import toast from 'react-hot-toast';
+import { ShoppingCart } from 'lucide-react';
 
 export const Card = (props) => {
   const handleCLick =()=>{
@@ -36,7 +37,8 @@ export const Card = (props) => {
         </div>
         <div className='add-cart'>
             <button onClick={handleCLick}>
-                <img className='shoppingcart' src="src/img/shopping-cart.png" alt="" />
+                {/* <img className='shoppingcart' src="src/img/shopping-cart.png" alt="" /> */}
+                <ShoppingCart />
                 <span className='bold'>Add to cart</span>
             </button>
         </div>

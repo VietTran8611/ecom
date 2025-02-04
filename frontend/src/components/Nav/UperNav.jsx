@@ -1,6 +1,7 @@
 import React, { useEffect } from 'react'
 import { useAuthStore } from '../../store/authStore'
 import { useNavigate } from 'react-router-dom';
+import { UserRoundPen } from 'lucide-react';
 
 export const UperNav = () => {
     const navigate = useNavigate();
@@ -52,8 +53,9 @@ export const UperNav = () => {
             ) : (
                 <li className='login'>
                 <div  className='login-list'>
-                    <img className='login-icon' src="src/img/user.png" alt="" />
-                    <a href="/login">Login </a> 
+                    {/* <img className='login-icon' src="src/img/user.png" alt="" /> */}
+                    <UserRoundPen />
+                    <a className='login-btn' href="/login">Login </a> 
                 </div>
             </li>
             )}
